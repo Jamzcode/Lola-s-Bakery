@@ -10,14 +10,14 @@ export default function Contact() {
     const name = data.get("name");
     const email = data.get("email");
     const phone = data.get("phone");
-    const comment = data.get("comment");
+    const message = data.get("message");
 
-    if(name === "" || email === "" || phone === ""){
+    if (name === "" || email === "" || phone === "") {
       alert("Please provide a name, email, and phone number.");
     }
 
     console.log(
-      `Name: ${name} | Email: ${email} | Phone: ${phone} | Comment: ${comment}`,
+      `Name: ${name} | Email: ${email} | Phone: ${phone} | Message: ${message}`,
     );
   }
 
@@ -44,8 +44,9 @@ export default function Contact() {
           <input type="text" class="bg-white" name="email" />
           <label>Phone:</label>
           <input type="tel" class="bg-white" name="phone" />
-          <label>Leave a comment:</label>
-          <textarea type="text" class="bg-white" name="comment" />
+          <label>Leave a message:</label>
+          <textarea class="bg-white" name="message" />
+          <input type="hidden" name="client-form" value="client-form" />
           <div class="flex justify-center items-center pt-4">
             <button
               type="submit"

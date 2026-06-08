@@ -1,12 +1,12 @@
 import Image from "./Image";
 
-import pic0 from "../assets/sourdough-menu.jpg";
+import pic0 from "../assets/sourdough-bread.jpg";
 
-import pic1 from "../assets/chocolate-cookies.jpg";
-import pic2 from "../assets/donuts.jpg";
-import pic3 from "../assets/foccacia.jpg";
-import pic4 from "../assets/scones.jpg";
-import pic5 from "../assets/packaging.jpg";
+import pic1 from "../assets/lemon-blueberry-focaccia.jpg";
+import pic2 from "../assets/sourdough-cinnamon-roll.jpg";
+import pic3 from "../assets/tomato&garlic-focaccia.jpg";
+import pic4 from "../assets/italian-herb-sourdough.jpg";
+import pic5 from "../assets/cranberry-orange-scones.jpg";
 
 export default function Menu() {
   return (
@@ -34,6 +34,11 @@ export default function Menu() {
         <div class="flex justify-center items-center">
           <Image src={pic5} />
         </div>
+      </div>
+      <div>
+        <p class="text-center w-full">
+          And more! Inquire for more recipes and projects.
+        </p>
       </div>
     </div>
   );
