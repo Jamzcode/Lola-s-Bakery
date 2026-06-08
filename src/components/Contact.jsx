@@ -1,25 +1,24 @@
-import { useState, useRef } from "react";
+// import { useRef } from "react";
 
 export default function Contact() {
-  // const [userInfo, setUserInfo] = useState(null);
-  const formRef = useRef(null);
+  // const formRef = useRef(null);
 
-  function handleFormSubmit(e, formRef) {
-    e.preventDefault();
-    const data = new FormData(formRef.current);
-    const name = data.get("name");
-    const email = data.get("email");
-    const phone = data.get("phone");
-    const message = data.get("message");
+  // function handleFormSubmit(e, formRef) {
+  //   e.preventDefault();
+  //   const data = new FormData(formRef.current);
+  //   const name = data.get("name");
+  //   const email = data.get("email");
+  //   const phone = data.get("phone");
+  //   const message = data.get("message");
 
-    if (name === "" || email === "" || phone === "") {
-      alert("Please provide a name, email, and phone number.");
-    }
+  //   if (name === "" || email === "" || phone === "") {
+  //     alert("Please provide a name, email, and phone number.");
+  //   }
 
-    console.log(
-      `Name: ${name} | Email: ${email} | Phone: ${phone} | Message: ${message}`,
-    );
-  }
+  //   console.log(
+  //     `Name: ${name} | Email: ${email} | Phone: ${phone} | Message: ${message}`,
+  //   );
+  // }
 
   return (
     <div class="h-screen">
@@ -30,23 +29,18 @@ export default function Contact() {
         Interested in ordering some pastries for your party/event/wedding? Drop
         your info down below and our bakers will get in contact.
       </div>
-      <form
-        ref={formRef}
-        onSubmit={(e) => {
-          handleFormSubmit(e, formRef);
-        }}
-        class="p-4"
-      >
+      <form name="client" data-netlify="true" class="p-4">
+        <input type="hidden" name="client" value="client" />
         <div class="flex flex-col gap-2 p-2 border">
           <label>Name(First and Last): </label>
-          <input type="text" class="bg-white" name="name" />
+          <input type="text" class="bg-white" name="name" required />
           <label>Email:</label>
-          <input type="text" class="bg-white" name="email" />
+          <input type="text" class="bg-white" name="email" required />
           <label>Phone:</label>
-          <input type="tel" class="bg-white" name="phone" />
+          <input type="tel" class="bg-white" name="phone" required />
           <label>Leave a message:</label>
           <textarea class="bg-white" name="message" />
-          <input type="hidden" name="client-form" value="client-form" />
+
           <div class="flex justify-center items-center pt-4">
             <button
               type="submit"
