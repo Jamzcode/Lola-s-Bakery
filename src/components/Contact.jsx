@@ -30,7 +30,7 @@ export default function Contact() {
         your info down below and our bakers will get in contact.
       </div>
       <form name="client" data-netlify="true" class="p-4">
-        <input type="hidden" name="client" value="client" />
+        <input type="hidden" name="form-name" value="client" />
         <div class="flex flex-col gap-2 p-2 border">
           <label>Name(First and Last): </label>
           <input type="text" class="bg-white" name="name" required />
