@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Success from "./components/Success";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -23,6 +24,7 @@ function App() {
             <Link to="/menu">Menu</Link>
           </nav>
           <Routes>
+            <Route path="/success" element={<Success />} />
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

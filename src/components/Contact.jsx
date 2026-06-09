@@ -1,23 +1,4 @@
-import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
-
 export default function Contact() {
-  const formRef = useRef(null);
-  const navigate = useNavigate();
-
-  async function handleFormSubmit(e) {
-    e.preventDefault();
-    const data = new FormData(formRef.current);
-
-    await fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(data).toString(),
-    });
-    alert("Message sent!");
-    navigate("/");
-  }
-
   return (
     <div class="h-screen">
       <h3 class="text-center font-black text-4xl p-4 uppercase">
@@ -28,10 +9,10 @@ export default function Contact() {
         your info down below and our bakers will get in contact.
       </div>
       <form
-        ref={formRef}
         name="client"
+        method="POST"
         data-netlify="true"
-        onSubmit={handleFormSubmit}
+        action="/success"
         class="p-4"
       >
         <input type="hidden" name="form-name" value="client" />
