@@ -1,24 +1,22 @@
-// import { useRef } from "react";
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
-  // const formRef = useRef(null);
+  const formRef = useRef(null);
+  const navigate = useNavigate();
 
-  // function handleFormSubmit(e, formRef) {
-  //   e.preventDefault();
-  //   const data = new FormData(formRef.current);
-  //   const name = data.get("name");
-  //   const email = data.get("email");
-  //   const phone = data.get("phone");
-  //   const message = data.get("message");
+  async function handleFormSubmit(e) {
+    e.preventDefault();
+    const data = new FormData(formRef.current);
 
-  //   if (name === "" || email === "" || phone === "") {
-  //     alert("Please provide a name, email, and phone number.");
-  //   }
-
-  //   console.log(
-  //     `Name: ${name} | Email: ${email} | Phone: ${phone} | Message: ${message}`,
-  //   );
-  // }
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(data).toString(),
+    });
+    alert("Message sent!");
+    navigate("/");
+  }
 
   return (
     <div class="h-screen">
@@ -30,10 +28,10 @@ export default function Contact() {
         your info down below and our bakers will get in contact.
       </div>
       <form
+        ref={formRef}
         name="client"
-        method="POST"
-        action="/"
         data-netlify="true"
+        onSubmit={handleFormSubmit}
         class="p-4"
       >
         <input type="hidden" name="form-name" value="client" />
