@@ -29,7 +29,13 @@ export default function Contact() {
         Interested in ordering some pastries for your party/event/wedding? Drop
         your info down below and our bakers will get in contact.
       </div>
-      <form name="client" method="POST" data-netlify="true" class="p-4">
+      <form
+        name="client"
+        method="POST"
+        action="/"
+        data-netlify="true"
+        class="p-4"
+      >
         <input type="hidden" name="form-name" value="client" />
         <div class="flex flex-col gap-2 p-2 border">
           <label>Name(First and Last): </label>
