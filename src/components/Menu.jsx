@@ -1,4 +1,3 @@
-import Image from "./Image";
 
 import pic0 from "../assets/sourdough-bread.jpg";
 
@@ -12,7 +11,7 @@ import PageTransition from "./PageTransition";
 export default function Menu() {
   return (
     <PageTransition>
-      <div class="h-auto">
+      <div class="min-h-screen">
         <h1 class="text-center font-black text-4xl p-4 uppercase">
           Current Offerings
         </h1>

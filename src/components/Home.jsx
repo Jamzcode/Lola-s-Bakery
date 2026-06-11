@@ -9,7 +9,7 @@ export default function HomePage() {
 
   return (
     <PageTransition>
-      <div class="h-auto p-2">
+      <div class="min-h-screen p-2">
         <div class="font-black uppercase flex justify-center items-center text-2xl text-center">
           <h1 class="text-center font-black text-3xl px-4 uppercase font-[abril_fatface]">
             Welcome to Lola's

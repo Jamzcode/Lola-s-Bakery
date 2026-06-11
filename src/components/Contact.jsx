@@ -4,7 +4,7 @@ import Image from "../components/Image";
 export default function Contact() {
   return (
     <PageTransition>
-      <div class="h-screen">
+      <div class="min-h-screen">
         <h3 class="text-center font-black text-4xl p-4 uppercase">
           Thanks For Supporting Local
         </h3>

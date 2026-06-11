@@ -6,7 +6,7 @@ import PageTransition from "./PageTransition";
 export default function About() {
   return (
     <PageTransition>
-      <div class="h-full">
+      <div class="min-h-screen">
         <div class=" flex items-center flex-col">
           <h1 class="text-center font-black text-4xl p-4 uppercase font-[league_script]">
             Our Lola

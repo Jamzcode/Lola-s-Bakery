@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div class="bg-amber-100 font-mono font-medium  h-full ">
+        <div class="bg-amber-100 font-mono font-medium  h-full">
           <h1 class="z-10 flex justify-center text-2xl font-bold uppercase [text-decoration:underline_overline] py-4 sticky top-0  bg-amber-100 font-[abril_fatface]">
             Lola's Sourdough Bakery
           </h1>
