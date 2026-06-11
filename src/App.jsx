@@ -17,7 +17,7 @@ function App() {
           <h1 class="z-10 flex justify-center text-2xl font-bold uppercase [text-decoration:underline_overline] py-4 sticky top-0  bg-amber-100 font-[abril_fatface]">
             Lola's Sourdough Bakery
           </h1>
-          <nav class=" z-10 mb-2 flex gap-2 justify-around border-b-4 border-t-4 border-double font-semibold sticky top-16 w-screen bg-amber-100 shadow-md shadow-gray-400 font-[abril_fatface]">
+          <nav class=" z-10 mb-2 flex gap-2 justify-around border-b-4 border-t-4 border-double font-semibold sticky top-14 w-screen bg-amber-100 shadow-md shadow-gray-400 font-[abril_fatface]">
             <Link to="/" class="hover:underline ">
               Home
             </Link>
